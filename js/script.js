@@ -17,13 +17,10 @@ createApp({
       });
     },
     updateList() {
-      console.log(this.todoItem);
       const data = {
-        todoItem: this.todoItem,
+        todoItem: this.todoItem
       };
-      axios
-        .post(this.apiUrl, data, {
-          headers: { "Content-Type": "multipart/form-data" },
+      axios.post(this.apiUrl, data, { headers: { "Content-Type": "multipart/form-data" },
         })
         .then((res) => {
           this.todoList = res.data;

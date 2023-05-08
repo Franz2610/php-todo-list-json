@@ -28,8 +28,8 @@
             </div>
             <div class="d-flex justify-content-between">
                 <div class="col d-flex flex-wrap">
-                    <div v-for="(todo,index) in todoList" class="p-1 text-center fs-6 m-3 card card-title w-25" v-if="todoList.length > 0">
-                        <p class="fs-3 text-center bold text-primary"> {{todo}} </p>
+                    <div v-for="(todo,index) in todoList"  class="p-1 text-center fs-6 m-3 card card-title w-25" v-if="todoList.length > 0">
+                        <p class="fs-3 text-center bold text-primary"> {{todo}}</p>
                         <div class="card-link">
                             <button class="btn btn-success">Fatto</button>
                             <button @click.stop="deleteItem(index)" class="btn btn-outline-danger bg-danger text-black ms-5">Cancella</button>
