@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo  List</title>
 </head>
@@ -28,12 +29,9 @@
             </div>
             <div class="d-flex justify-content-between">
                 <div class="col d-flex flex-wrap">
-                    <div v-for="(todo,index) in todoList"  class="p-1 text-center fs-6 m-3 card card-title w-25" v-if="todoList.length > 0">
-                        <p class="fs-3 text-center bold text-primary"> {{todo}}</p>
-                        <div class="card-link">
-                            <button class="btn btn-success">Fatto</button>
-                            <button @click.stop="deleteItem(index)" class="btn btn-outline-danger bg-danger text-black ms-5">Cancella</button>
-                        </div>
+                    <div v-for="(todo,index) in todoList"  :class="todo.todo.done ? 'alert alert-success text-decoration-line-through done': ''"@click="toggleTaskDone(index)" class="p-1 text-center fs-6 m-3 card card-title w-25" v-if="todoList.length > 0">
+                        <p class="fs-3 text-center bold text-primary" > {{todo.todo}}</p>
+                        <button @click.stop="deleteItem(index)" class="btn btn-outline-danger bg-danger text-black m-2">Cancella</button>
                     </div>
                     <h1 v-else class="text-center fs-1 bold text-white m-5 text-center">La lista è vuota</h1>
                 </div>

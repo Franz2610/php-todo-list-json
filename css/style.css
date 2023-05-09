@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.done {
+    background-color: rgba(6, 252, 39, 0.858) !important;
+    text-decoration: line-through;
+    color: white;
+}

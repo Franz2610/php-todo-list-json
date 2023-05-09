@@ -1,1 +1,8 @@
-["Alzarsi","Seguire","Palestra","Doccia","Mangiare","Studiare","Dormire"]
+[
+    {"todo":"mangiaree",
+    "done":false},
+    {"todo":"studiare",
+    "done":false},
+    {"todo":"dormire",
+    "done":false}
+]

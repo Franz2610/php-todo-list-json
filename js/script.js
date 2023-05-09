@@ -29,7 +29,19 @@ createApp({
     },
     deleteItem(index) {
       this.todoList.splice(index, 1);
-    }
+    },
+    toggleTaskDone(index) {
+        const data = {
+            updateData: index
+          };
+          axios.post(this.apiUrl, data, { headers: { "Content-Type": "multipart/form-data" },
+            })
+            .then((res) => {
+              this.todoList = res.data;
+              this.todoItem = "";
+            });
+        
+    },
   },
   mounted() {
     this.readList();
