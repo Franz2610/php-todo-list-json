@@ -30,8 +30,8 @@
             <div class="d-flex justify-content-between">
                 <div class="col d-flex flex-wrap">
                     <div v-for="(todo,index) in todoList"  class="p-1 text-center fs-6 m-3 card card-title w-25" v-if="todoList.length > 0">
-                        <p class="fs-3 text-center bold text-primary" :class="todo.done ? 'alert alert-success text-decoration-line-through done': ''"@click="toggleTaskDone(index)"> {{todo.todo}}</p>
-                        <button @click.stop="deleteItem(index)" class="btn btn-outline-danger bg-danger text-black m-2">Cancella</button>
+                        <p class="fs-3 text-center todo-item bold text-primary" :class="todo.done ? 'alert alert-success text-decoration-line-through done': ''"@click="toggleTaskDone(index)"> {{todo.todo}}</p>
+                        <button @click.stop="deleteItem(index)" class="btn btn-outline-danger bg-danger text-black m-2">Cancella <i class="fa-solid fa-trash"></i></button>
                     </div>
                     <h1 v-else class="text-center fs-1 bold text-white m-5 text-center">La lista è vuota</h1>
                 </div>

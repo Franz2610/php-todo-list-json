@@ -9,3 +9,6 @@
     text-decoration: line-through;
     color: white;
 }
+.todo-item{
+    cursor: pointer;
+}

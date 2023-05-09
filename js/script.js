@@ -32,7 +32,7 @@ createApp({
     },
     toggleTaskDone(index) {
         const data = {
-            updateData: index
+            updateList: index
           };
           axios.post(this.apiUrl, data, { headers: { "Content-Type": "multipart/form-data" },
             })
@@ -40,7 +40,6 @@ createApp({
               this.todoList = res.data;
               this.todoItem = "";
             });
-        
     },
   },
   mounted() {

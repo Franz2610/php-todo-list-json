@@ -8,7 +8,7 @@ $phparray = json_decode($testo, true);
 
 if(isset($_POST['todoItem'])){
     $todoItem = [
-      "task" => $_POST['todoItem'],
+      "todo" => $_POST['todoItem'],
       "done" => false,
     ];
     array_push($phparray , $todoItem);

@@ -1,6 +1,8 @@
 [
-    {"todo":"mangiaree",
-    "done":false},
+    {
+        "todo":"mangiare",
+        "done":false
+    },
     {"todo":"studiare",
     "done":false},
     {"todo":"dormire",
